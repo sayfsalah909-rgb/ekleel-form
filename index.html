@@ -677,7 +677,7 @@ async function printForm() {
 </head>
 <body>
 <img id="printImage" src="${imageData}">
-<script>
+<scr${'ipt'}>
   const img = document.getElementById('printImage');
   function go() {
     if (document.fonts && document.fonts.ready) {
@@ -688,7 +688,7 @@ async function printForm() {
   }
   if (img.complete) go();
   else img.onload = go;
-<\/script>
+<\/scr${'ipt'}>
 
 <script>
 if ('serviceWorker' in navigator && location.protocol !== 'file:') {

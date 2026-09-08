@@ -1,16 +1,20 @@
-Ekleel Group — iPhone Web App
+Ekleel Group — نسخة iPhone/Web النهائية
 
-هذه النسخة مجهزة للعمل كتطبيق ويب (PWA) على iPhone.
+هذه النسخة تصلح للرفع على GitHub Pages أو أي استضافة HTTPS ثابتة.
 
-مهم:
-- لا يمكن للآيفون تثبيت PWA من ملف HTML محلي داخل تطبيق "الملفات".
-- يجب وضع مجلد هذه الحزمة على استضافة HTTPS (مثل GitHub Pages).
-- بعد فتح الرابط في Safari: مشاركة → إضافة إلى الشاشة الرئيسية.
-- سيظهر Ekleel Group كأيقونة مستقلة ويفتح بواجهة تطبيق.
+مهم جدًا:
+- لا تفتح index.html من تطبيق "الملفات" على iPhone إذا أردت تشغيل JavaScript بالكامل.
+- ارفع الملفات إلى استضافة HTTPS ثم افتح الرابط في Safari.
+- في GitHub Pages: ارفع الملفات إلى المستودع، ثم Settings > Pages > Deploy from a branch > main > / (root).
+- بعد ظهور الرابط افتحه في Safari على iPhone ثم Share > Add to Home Screen.
+
+الإصلاح في هذه النسخة:
+تم إصلاح خطأ HTML/JavaScript داخل وظيفة الطباعة كان يجعل متصفح iPhone يوقف قراءة جزء كبير من JavaScript عند وجود <script> داخل قالب الطباعة. لذلك كانت الأزرار تبدو وكأنها لا تستجيب.
 
 الملفات:
-index.html        الاستمارة
-manifest.webmanifest  تعريف التطبيق
-sw.js             التشغيل/التخزين المؤقت دون اتصال بعد أول فتح
-icon-192.png      أيقونة iPhone
-icon-512.png      أيقونة PWA
+index.html
+manifest.webmanifest
+sw.js
+icon-192.png
+icon-512.png
+.nojekyll
